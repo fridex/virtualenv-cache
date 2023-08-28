@@ -1,0 +1,10 @@
+[virtualenv-cache]
+# Maximum number of projects stored in the cache.
+cache_size = {cache_size}
+# A path to the cache where virtualenv and related metadata are stored.
+cache_path = "{cache_path}"
+# A path to the project's virtual environment.
+virtualenv_path = ".venv"
+# Paths to project's requirements lock files that affect installed dependencies in the virtual environment.
+requirements_lock_paths = [
+]

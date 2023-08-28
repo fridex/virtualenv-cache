@@ -1,0 +1,7 @@
+[virtualenv-cache]
+cache_size = 20
+cache_path = "../../caches/empty-project"
+virtualenv_path = ".venv"
+requirements_lock_paths = [
+  "requirements.txt",
+]

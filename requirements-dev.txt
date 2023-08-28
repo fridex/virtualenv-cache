@@ -1,0 +1,5 @@
+flexmock
+pytest
+pytest-emoji
+pytest-md
+tomli-w

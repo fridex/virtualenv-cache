@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "virtualenv-cache"
+authors = [
+    {name = "Fridolin Pokorny", email = "fridolin.pokorny@gmail.com"},
+]
+description = "Manage a cache of Python environments"
+readme = "README.rst"
+requires-python = ">=3.6"
+keywords = ["packaging", "pip-tools", "cache", "dependencies", "virtual environment", "poetry", "pdm", "pipfile"]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3 :: Only",
+    "Typing :: Typed",
+]
+dynamic = ["version", "dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+version = {attr = "virtualenv_cache.__version__"}
+
+[project.scripts]
+virtualenv-cache = "virtualenv_cache.cli:cli"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q -vvv"
+testpaths = [
+    "tests",
+]
+
+[project.urls]
+homepage = "https://github.com/fridex/virtualenv-cache"
