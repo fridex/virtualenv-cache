@@ -1,0 +1,6 @@
+attrs
+click
+daiquiri
+python-dateutil
+rich
+tomli

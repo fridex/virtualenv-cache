@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "virtualenv-cache"
+authors = [
+    {name = "Fridolin Pokorny", email = "fpokorny@cloudlinux.com"},
+]
+description = "Manage cache of Python environments"
+readme = "README.rst"
+requires-python = ">=3.7"
+keywords = ["packaging", "pip-tools", "cache", "dependencies", "virtual environment", "poetry", "pdm", "pipfile"]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.scripts]
+virtualenv-cache = "virtualenv_cache.cli:cli"
+
+[tool.pytest.ini_options]
+minversion = "7.4"
+addopts = "-ra -q -vvv"
+testpaths = [
+    "tests",
+]
