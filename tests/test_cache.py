@@ -17,7 +17,7 @@ class TestCache(BaseTestcase):
 
     def test_get_cache_entry_usage(self) -> None:
         pass
-    
+
     def test_list_entries(self) -> None:
         pass
 

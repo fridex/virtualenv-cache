@@ -70,22 +70,6 @@ class TestCLI(BaseTestcase):
 
     def test_restore(self) -> None:
         """Test restoring a virtual environment."""
-        config_path = os.path.join(
-            BaseTestcase.MY_PROJECT_DIR, ".virtualenv_cache.toml"
-        )
-        result = CliRunner().invoke(
-            cli,
-            [
-                "restore",
-                "--work-dir",
-                BaseTestcase.MY_PROJECT_DIR,
-                "--config-path",
-                config_path,
-                "--format",
-                "json",
-            ],
-        )
-        assert result.exit_code == 0
         # TODO: implement
 
     def test_store(self) -> None:

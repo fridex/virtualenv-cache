@@ -1,2 +1,4 @@
 flexmock
 pytest
+pytest-emoji
+pytest-md

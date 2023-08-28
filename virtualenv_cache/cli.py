@@ -5,6 +5,7 @@ import logging
 import os
 import sys
 from typing import Generator
+from typing import Optional
 from contextlib import contextmanager
 
 import click
@@ -25,7 +26,7 @@ _LOGGER = logging.getLogger(__title__)
 
 
 @contextmanager
-def cwd(target_dir: str | None) -> Generator[None, None, None]:
+def cwd(target_dir: Optional[str]) -> Generator[None, None, None]:
     """Work with directories in push/pop manner."""
     old_dir = os.getcwd()
     target_dir = target_dir or old_dir  # Noop on None.
